@@ -4,13 +4,20 @@
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
+  --mainGreen: #25ff22;
 }
 
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  padding-left: 10px;
 }
+
+h1 {
+  text-align: center;
+}
+
 h1,
 h2,
 h3,
@@ -20,9 +27,11 @@ h6 {
   font-family: "Courier New", Courier, monospace !important;
   letter-spacing: 0.1rem !important;
 }
+
 .text-yellow {
   color: var(--mainYellow);
 }
+
 .desktop-icon {
   cursor: pointer;
   color: var(--mainYellow);
