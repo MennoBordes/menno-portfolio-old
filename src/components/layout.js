@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-import "./bootstrap.min.css"
-import "./layout.css"
-
 import Navbar from "./Globals/Navbar"
+
+import "./layout.css"
+import "./bootstrap.min.css"
 
 const Layout = ({ children }) => (
   <>
