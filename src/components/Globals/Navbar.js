@@ -18,6 +18,11 @@ export default class Navbar extends Component {
         path: "/over",
         text: "over",
       },
+      {
+        id: 3,
+        path: "/portfolio",
+        text: "portfolio",
+      },
     ],
   }
   navbarHandler = () => {
