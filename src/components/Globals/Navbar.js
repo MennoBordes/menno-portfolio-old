@@ -15,13 +15,13 @@ export default class Navbar extends Component {
       },
       {
         id: 2,
-        path: "/over",
-        text: "over",
+        path: "/portfolio",
+        text: "portfolio",
       },
       {
         id: 3,
-        path: "/portfolio",
-        text: "portfolio",
+        path: "/over",
+        text: "over",
       },
     ],
   }
