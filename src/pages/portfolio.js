@@ -6,7 +6,7 @@ export default class portfolio extends Component {
   render() {
     return (
       <Layout>
-        <h1>Welkom op mijn portfolio.</h1>
+        <h1 className="text-center">Welkom op mijn portfolio.</h1>
       </Layout>
     )
   }
