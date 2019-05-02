@@ -56,11 +56,6 @@ export default class Navbar extends Component {
                 </li>
               )
             })}
-            <li className="nav-item ml-sm-5">
-              <Link to="/">
-                <FaDesktop className="desktop-icon" />
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>

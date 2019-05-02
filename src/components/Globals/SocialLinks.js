@@ -1,28 +1,27 @@
 import React from "react"
-import { FaAt, FaLinkedin } from "react-icons/fa"
+import { FaAt, FaLinkedin, FaGithub } from "react-icons/fa"
 
 export default function SocialLinks() {
   return (
     <section>
       <div className="container text-white">
-        <div className="row">
-          <div className="col-10 col-sm-8 mx-auto text-center">
-            <p className="lead mb-2 text-capitalize">LinkedIn:</p>
-          </div>
-        </div>
         <div className="row text-center">
           <div className="column ">
             <div>
-              <FaAt />
-
-              <p className="text-muted">BlaBlaBla</p>
+              <FaAt className="desktop-icon" />
+              <p className="text-muted">Email link</p>
             </div>
           </div>
           <div className="column">
             <div>
-              <FaLinkedin />
-
-              <p className="text-muted">BlaBlaBla</p>
+              <FaLinkedin className="desktop-icon" />
+              <p className="text-muted">LinkedIn link</p>
+            </div>
+          </div>
+          <div className="column">
+            <div>
+              <FaGithub className="desktop-icon" />
+              <p className="text-muted">Github link</p>
             </div>
           </div>
         </div>
