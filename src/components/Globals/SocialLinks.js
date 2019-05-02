@@ -6,23 +6,25 @@ export default function SocialLinks() {
     <section>
       <div className="container text-white">
         <div className="row text-center">
-          <div className="column ">
-            <div>
-              <FaAt className="desktop-icon" />
-              <p className="text-muted">Email link</p>
-            </div>
-          </div>
           <div className="column">
-            <div>
+            <a href="https://linkedin.com/in/menno-bordes/">
               <FaLinkedin className="desktop-icon" />
-              <p className="text-muted">LinkedIn link</p>
-            </div>
+              <p className="text-muted small-font-size">
+                https://linkedin.com/in/menno-bordes/
+              </p>
+            </a>
+          </div>
+          <div className="column ">
+            <FaAt className="desktop-icon" />
+            <p className="text-muted small-font-size">mennobordes@hetnet.nl</p>
           </div>
           <div className="column">
-            <div>
+            <a href="https://github.com/Skillerde6de">
               <FaGithub className="desktop-icon" />
-              <p className="text-muted">Github link</p>
-            </div>
+              <p className="text-muted small-font-size">
+                https://github.com/Skillerde6de
+              </p>
+            </a>
           </div>
         </div>
       </div>

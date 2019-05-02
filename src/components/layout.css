@@ -93,8 +93,12 @@ h6 {
   clear: both;
 }
 
+.small-font-size {
+  font-size: 12px;
+}
+
 /* Style when screen smaller than */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .column {
     width: 100%;
   }
