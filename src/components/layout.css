@@ -1,3 +1,4 @@
+/* Variables to re-use throughough this document */
 :root {
   --mainBrown: #2d1e1f;
   --mainYellow: #ff9e09;
@@ -5,14 +6,17 @@
   --mainWhite: #fff;
   --mainDark: #222;
   --mainGreen: #25ff22;
+  --lightGrey: #e0e0e0;
 }
 
+/* Default elements for the entire webpage */
 body {
   background: var(--mainWhite);
   color: var(--mainDark);
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
+/* Heading settings */
 h1,
 h2,
 h3,
@@ -23,22 +27,31 @@ h6 {
   letter-spacing: 0.1rem !important;
 }
 
+/* Default background for the navbar */
 .navbar-background {
   background-color: var(--mainGrey) !important;
 }
 
+/* Default color for text */
 .text-yellow {
   color: var(--mainYellow);
 }
 
+/* Default color for text */
+.text-white {
+  color: var(--mainWhite);
+}
+
+/* Style the icons */
 .desktop-icon {
   cursor: pointer;
   color: var(--mainYellow);
   font-size: 2rem;
 }
 
+/* Default background for images */
 .default-background {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,16 +61,41 @@ h6 {
   background-attachment: fixed;
 }
 
+/* Style for button */
 .btn-yellow {
   color: var(--mainYellow) !important;
   border-color: var(--mainYellow) !important;
 }
+/* Style on button hover */
 .btn-yellow:hover {
   background: var(--mainYellow) !important;
   color: var(--mainBrown) !important;
 }
 
+/* Style for footer */
 .footer {
   background: var(--mainDark) !important;
 }
 
+/* Style for row */
+.row {
+  display: flex;
+}
+
+/* Style for column */
+.column {
+  float: left;
+  width: 33.33%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style when screen smaller than */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
