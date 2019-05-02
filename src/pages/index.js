@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { FaDesktop } from "react-icons/fa"
 import BackgroundSection from "../components/Globals/BackgroundSection"
+import Info from "../components/Home/Info"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -22,6 +23,7 @@ const IndexPage = ({ data }) => (
       title="Portfolio"
       styleClass="default-background"
     />
+    <Info />
   </Layout>
 )
 

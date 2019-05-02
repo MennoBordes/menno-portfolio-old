@@ -48,3 +48,12 @@ h6 {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.btn-yellow {
+  color: var(--mainYellow) !important;
+  border-color: var(--mainYellow) !important;
+}
+.btn-yellow:hover {
+  background: var(--mainYellow) !important;
+  color: var(--mainBrown) !important;
+}
