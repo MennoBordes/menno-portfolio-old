@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-// import logo from "../../images/logo.svg"
 import { FaDesktop } from "react-icons/fa"
 
 export default class Navbar extends Component {
@@ -35,13 +34,9 @@ export default class Navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-light navbar-light">
+      <nav className="navbar navbar-expand-sm navbar-background navbar-light">
         <Link to="/" className="navbar-brand">
           <FaDesktop className="desktop-icon" />
-          {/* <img src={logo} alt="logo" />
-          {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
-Creative Commons (Attribution-Share 3.0 Unported);
-https://www.iconfinder.com/webalys */}
         </Link>
         <button
           className="navbar-toggler"

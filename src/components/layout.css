@@ -1,7 +1,7 @@
 :root {
   --mainBrown: #2d1e1f;
   --mainYellow: #ff9e09;
-  --mainGrey: #ece8dc;
+  --mainGrey: #c6c6c6;
   --mainWhite: #fff;
   --mainDark: #222;
   --mainGreen: #25ff22;
@@ -11,11 +11,6 @@ body {
   background: var(--mainWhite);
   color: var(--mainDark);
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-  padding-left: 10px;
-}
-
-h1 {
-  text-align: center;
 }
 
 h1,
@@ -26,6 +21,10 @@ h5,
 h6 {
   font-family: "Courier New", Courier, monospace !important;
   letter-spacing: 0.1rem !important;
+}
+
+.navbar-background {
+  background-color: var(--mainGrey) !important;
 }
 
 .text-yellow {
@@ -43,7 +42,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(37, 255, 34, 0.2), rgba(37, 255, 34, 0.2));
+  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
