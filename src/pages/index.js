@@ -3,21 +3,12 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { FaDesktop } from "react-icons/fa"
 import BackgroundSection from "../components/Globals/BackgroundSection"
 import Info from "../components/Home/Info"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Welkom</h1>
-    <h6>Made by Menno</h6>
-    <p>Deze website is momenteel onder constructie!</p>
-    <p>
-      Deze website zal worden gebruikt om een portfolio op weer te geven van
-      mijn gedane activiteiten.
-    </p>
-    <FaDesktop />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
       title="Portfolio"
