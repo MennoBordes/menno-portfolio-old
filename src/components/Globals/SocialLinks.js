@@ -4,7 +4,7 @@ import { FaAt, FaLinkedin, FaGithub } from "react-icons/fa"
 export default function SocialLinks() {
   return (
     <section>
-      <div className="container text-white">
+      <div className="container text-white mb-4">
         <div className="row text-center">
           <div className="column">
             <a href="https://linkedin.com/in/menno-bordes/">
