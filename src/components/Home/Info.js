@@ -1,16 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-import Title from "../Globals/Title"
 
 export default function Info() {
   return (
-    <section className="py-5">
+    <section className="py-3">
       <div className="container">
-        <Title title="Welkom" />
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
-            <div className="lead text-muted mb-5">
+            <div className="lead text-muted">
               <p>Beste bezoeker, welkom op mijn portfolio website.</p>
+              <hr />
               <p>
                 Deze website wordt gebruikt om mijn portfolio op bij te houden.
               </p>
@@ -21,7 +20,7 @@ export default function Info() {
               </Link>
             </div>
             <hr />
-            <div className="lead text-muted mb-5">
+            <div className="lead text-muted">
               <p>In de about sectie kunt u gegevens over mij vinden.</p>
               <Link to="/over/">
                 <button className="btn text-uppercase btn-yellow">over</button>

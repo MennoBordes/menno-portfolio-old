@@ -8,7 +8,7 @@ export default function Title({
 }) {
   const Tag = "h" + headerType
   return (
-    <div className="row">
+    <div className="row pt-5">
       <div className="col">
         <div className={titleOrientation}>
           <Tag className={styleClass}>{title}</Tag>

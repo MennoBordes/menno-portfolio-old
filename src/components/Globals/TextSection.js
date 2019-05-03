@@ -4,9 +4,7 @@ export default function TextSection({ children, styleClass }) {
   return (
     <>
       <section className="py-2">
-        <div className={styleClass}>
-          <div id="content-wrap">{children}</div>
-        </div>
+        <div className={styleClass}>{children}</div>
       </section>
     </>
   )
