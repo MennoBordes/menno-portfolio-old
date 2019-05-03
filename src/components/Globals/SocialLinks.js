@@ -7,7 +7,7 @@ export default function SocialLinks() {
       <div className="container text-white mb-4">
         <div className="row text-center">
           <div className="column">
-            <a href="https://linkedin.com/in/menno-bordes/">
+            <a href="https://linkedin.com/in/menno-bordes/" target="_blank">
               <FaLinkedin className="desktop-icon" />
               <p className="text-muted small-font-size">
                 https://linkedin.com/in/menno-bordes/
@@ -19,7 +19,7 @@ export default function SocialLinks() {
             <p className="text-muted small-font-size">mennobordes@hetnet.nl</p>
           </div>
           <div className="column">
-            <a href="https://github.com/Skillerde6de">
+            <a href="https://github.com/Skillerde6de" target="_blank">
               <FaGithub className="desktop-icon" />
               <p className="text-muted small-font-size">
                 https://github.com/Skillerde6de
