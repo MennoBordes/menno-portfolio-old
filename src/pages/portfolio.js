@@ -13,6 +13,7 @@ export default class portfolio extends Component {
           <a
             href="https://portfoliomennobordes.wordpress.com/portfolio-2/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <button className="btn text-uppercase btn-yellow">
               wordpress portfolio
