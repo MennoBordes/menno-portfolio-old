@@ -1,11 +1,17 @@
 import React from "react"
 
-export default function Title({ title, styleClass, titleOrientation }) {
+export default function Title({
+  headerType,
+  title,
+  styleClass,
+  titleOrientation,
+}) {
+  const Tag = "h" + headerType
   return (
     <div className="row">
-      <div className="col mb-3">
+      <div className="col">
         <div className={titleOrientation}>
-          <h1 className={styleClass}>{title}</h1>
+          <Tag className={styleClass}>{title}</Tag>
         </div>
       </div>
     </div>
@@ -13,6 +19,7 @@ export default function Title({ title, styleClass, titleOrientation }) {
 }
 
 Title.defaultProps = {
+  headerType: "1",
   title: "default title",
   styleClass: "display-4 text-capitalize font-weight-bold",
   titleOrientation: "text-center",
