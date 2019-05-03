@@ -11,7 +11,8 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="Portfolio"
+      title="Menno Bordes"
+      subTitle="Portfolio"
       styleClass="default-background"
     />
     <Info />
