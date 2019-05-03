@@ -3,7 +3,7 @@ import SocialLinks from "./SocialLinks"
 
 export default function Footer() {
   return (
-    <footer className="footer py-3">
+    <footer id="footer" className="py-3">
       <SocialLinks />
       <div className="container">
         <div className="row">

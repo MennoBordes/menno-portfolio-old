@@ -6,11 +6,16 @@ import "./layout.css"
 import "./bootstrap.min.css"
 import Footer from "./Globals/Footer"
 
+// Default layout to be used on every page
 const Layout = ({ children }) => (
   <>
-    <Navbar />
-    {children}
-    <Footer />
+    <div id="page-container">
+      <Navbar />
+      <div id="content-wrap">
+        {children}
+        <Footer />
+      </div>
+    </div>
   </>
 )
 
