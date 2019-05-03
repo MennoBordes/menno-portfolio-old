@@ -27,6 +27,23 @@ h6 {
   letter-spacing: 0.1rem !important;
 }
 
+/* Style for footer */
+footer {
+  background: var(--mainDark) !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--mainDark);
+  margin: 1em 0;
+  padding: 0;
+}
 /* Default background for the navbar */
 .navbar-background {
   background-color: var(--mainGrey) !important;
@@ -80,15 +97,6 @@ h6 {
 /* Used to place the footer below the content */
 #content-wrap {
   padding-bottom: 10rem;
-}
-
-/* Style for footer */
-footer {
-  background: var(--mainDark) !important;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10rem;
 }
 
 /* Style for row */

@@ -20,6 +20,7 @@ export default function Info() {
                 </button>
               </Link>
             </div>
+            <hr />
             <div className="lead text-muted mb-5">
               <p>In de about sectie kunt u gegevens over mij vinden.</p>
               <Link to="/over/">
