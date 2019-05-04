@@ -7,15 +7,16 @@ export default function BackgroundSection({
   title,
   subTitle,
   children,
+  styleText,
 }) {
-  const style = "text-white text-uppercase text-center"
+  // const style = "text-white text-uppercase text-center"
   return (
     <BackgroundImage className={styleClass} fluid={img}>
-      <div className="row">
+      <div className="row text-uppercase text-center">
         <div className="col">
-          <h1 className={style}>{title}</h1>
+          <h1 className={styleText}>{title}</h1>
           <hrWhite />
-          <p className={style}>{subTitle}</p>
+          <p className={styleText}>{subTitle}</p>
           {children}
         </div>
       </div>
@@ -26,6 +27,7 @@ export default function BackgroundSection({
 BackgroundSection.defaultProps = {
   title: "default title",
   styleClass: "default-background",
+  styleText: "text-white",
 }
 
 // "title text-white text-uppercase text-center display-4 font-weight-bold"
