@@ -135,6 +135,10 @@ hrWhite {
   font-size: 12px;
 }
 
+.projects {
+  background: var(--mainGrey);
+}
+
 /* Style when screen smaller than */
 @media screen and (max-width: 700px) {
   #content-wrap {
