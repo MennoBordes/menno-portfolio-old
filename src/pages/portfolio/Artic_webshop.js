@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Title from "../../components/Globals/Title"
+
 export default function Artic_webshop() {
   return (
     <Layout>
@@ -10,7 +11,7 @@ export default function Artic_webshop() {
         keywords={[`gatsby`, `application`, `react`]}
       />
       <Title title="Actic webshop" />
-      <p>blablablablabla</p>
+      <p>Een verhaal over hoe de webshop is gemaakt.</p>
     </Layout>
   )
 }

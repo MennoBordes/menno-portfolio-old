@@ -1,16 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import TextSection from "../components/Globals/TextSection"
 import Title from "../components/Globals/Title"
 import SEO from "../components/seo"
-import Projects from "../components/Portfolio/Projects"
-import ProjectsTester from "../components/Portfolio/ProjectsTester"
+import Project from "../components/Portfolio/Projects"
 
 const portfolioPage = ({ data }) => (
   <Layout>
     <SEO title="Portfolio" keywords={[`gatsby`, `application`, `react`]} />
+    {/* Title of the page */}
     <Title
       title="Welkom op mijn portfolio"
       styleClass="text-uppercase font-weight-bold"
@@ -28,39 +27,9 @@ const portfolioPage = ({ data }) => (
         </button>
       </a>
     </TextSection>
-    <Projects items={data.projects} />
-    <ProjectsTester image={data.articWebshop} />
+    {/* Displays all curent projects */}
+    <Project />
   </Layout>
 )
-
-export const query = graphql`
-  query {
-    projects: allContentfulPortfolioElements {
-      edges {
-        node {
-          id
-          title
-          category
-          description {
-            description
-          }
-          images {
-            fixed(width: 150, height: 150) {
-              ...GatsbyContentfulFixed_tracedSVG
-            }
-          }
-        }
-      }
-    }
-
-    articWebshop: file(relativePath: { eq: "PersonalImage.png" }) {
-      childImageSharp {
-        fixed(width: 150, height: 150) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
 
 export default portfolioPage
