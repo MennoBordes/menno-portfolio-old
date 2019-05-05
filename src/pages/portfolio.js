@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import TextSection from "../components/Globals/TextSection"
 import Title from "../components/Globals/Title"
 import SEO from "../components/seo"
-import Menu from "../components/Portfolio/Projects"
+import Projects from "../components/Portfolio/Projects"
 
 const portfolioPage = ({ data }) => (
   <Layout>
@@ -27,7 +27,7 @@ const portfolioPage = ({ data }) => (
         </button>
       </a>
     </TextSection>
-    <Menu items={data.projects} />
+    <Projects items={data.projects} />
   </Layout>
 )
 

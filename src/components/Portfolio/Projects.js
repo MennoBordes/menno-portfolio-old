@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import Title from "../Globals/Title"
 import Img from "gatsby-image"
+
+import Title from "../Globals/Title"
 
 export default class Projects extends Component {
   constructor(props) {
