@@ -6,6 +6,7 @@ import TextSection from "../components/Globals/TextSection"
 import Title from "../components/Globals/Title"
 import SEO from "../components/seo"
 import Projects from "../components/Portfolio/Projects"
+import ProjectsTester from "../components/Portfolio/ProjectsTester"
 
 const portfolioPage = ({ data }) => (
   <Layout>
@@ -28,11 +29,12 @@ const portfolioPage = ({ data }) => (
       </a>
     </TextSection>
     <Projects items={data.projects} />
+    <ProjectsTester image={data.webshop} />
   </Layout>
 )
 
 export const query = graphql`
-  {
+  query {
     projects: allContentfulPortfolioElements {
       edges {
         node {
@@ -47,6 +49,14 @@ export const query = graphql`
               ...GatsbyContentfulFixed_tracedSVG
             }
           }
+        }
+      }
+    }
+
+    webshop: file(relativePath: { eq: "PersonalImage.png" }) {
+      childImageSharp {
+        fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
