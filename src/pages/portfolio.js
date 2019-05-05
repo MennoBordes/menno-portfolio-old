@@ -29,7 +29,7 @@ const portfolioPage = ({ data }) => (
       </a>
     </TextSection>
     <Projects items={data.projects} />
-    <ProjectsTester image={data.webshop} />
+    <ProjectsTester image={data.articWebshop} />
   </Layout>
 )
 
@@ -53,9 +53,9 @@ export const query = graphql`
       }
     }
 
-    webshop: file(relativePath: { eq: "PersonalImage.png" }) {
+    articWebshop: file(relativePath: { eq: "PersonalImage.png" }) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
+        fixed(width: 150, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
