@@ -3786,6 +3786,9 @@ input[type="submit"].btn-block {
   margin-bottom: 0;
   list-style: none;
 }
+.nav-link-padding {
+  padding: 0.5rem 1rem;
+}
 .nav-link {
   display: block;
   /* padding: 0.5rem 1rem; */
