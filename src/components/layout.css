@@ -177,9 +177,15 @@ footer {
   position: relative;
   min-height: 100vh;
 }
+
 /* Used to place the footer below the content */
 #content-wrap {
   padding-bottom: 10rem;
+}
+
+/* Used to keep the image size below x px */
+#PersonalImageContainer {
+  max-width: 300px;
 }
 
 /* Style for row */
