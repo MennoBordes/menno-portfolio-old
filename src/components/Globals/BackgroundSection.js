@@ -15,7 +15,7 @@ export default function BackgroundSection({
       <div className="row text-uppercase text-center">
         <div className="col">
           <h1 className={styleText}>{title}</h1>
-          <hrWhite />
+          <hr className="hr-white" />
           <p className={styleText}>{subTitle}</p>
           {children}
         </div>

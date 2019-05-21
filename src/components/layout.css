@@ -97,6 +97,15 @@ p {
   padding: 1em 0;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--mainDark);
+  margin: 1em 0;
+  padding: 0;
+}
+
 /*--------------------------------------------------------------
 General styles
 --------------------------------------------------------------*/
@@ -109,23 +118,8 @@ footer {
   height: 10rem;
 }
 
-/* Black line */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid var(--mainDark);
-  margin: 1em 0;
-  padding: 0;
-}
-/* White line */
-hrWhite {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid var(--mainWhite);
-  margin: 1em 0;
-  padding: 0;
+.hr-white {
+  border-top-color: 1px solid var(--mainWhite);
 }
 
 /* Default background for the navbar */
