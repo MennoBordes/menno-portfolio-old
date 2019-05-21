@@ -21,14 +21,9 @@ const overPage = ({ data }) => (
   </Layout>
 )
 
-// childImageSharp {
-//   fluid(maxWidth: 500, maxHeight: 500) {
-//     ...GatsbyImageSharpFluid
-//   }
-
 export const query = graphql`
   query {
-    PersonalImage: file(relativePath: { eq: "PersonalImage.png" }) {
+    PersonalImage: file(relativePath: { eq: "OwnImage.jpg" }) {
       ...squareImage
     }
   }
@@ -37,7 +32,7 @@ export const query = graphql`
 export const squareImage = graphql`
   fragment squareImage on File {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 200) {
+      fluid(maxWidth: 300, maxHeight: 300) {
         ...GatsbyImageSharpFluid
       }
     }

@@ -6,7 +6,7 @@ import Title from "../components/Globals/Title"
 import SEO from "../components/seo"
 import Project from "../components/Portfolio/Projects"
 
-const portfolioPage = ({ data }) => (
+const portfolioPage = () => (
   <Layout>
     <SEO title="Portfolio" keywords={[`gatsby`, `application`, `react`]} />
     {/* Title of the page */}
