@@ -1,26 +1,55 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Navbar from "./Globals/Navbar"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import "./layout.css"
-import "./bootstrap.min.css"
-import Footer from "./Globals/Footer"
+import '../assets/scss/main.scss'
+import Header from './Header'
+import Menu from './Menu'
+import Contact from './Contact'
+import Footer from './Footer'
 
-// Default layout to be used on every page
-const Layout = ({ children }) => (
-  <>
-    <div id="page-container">
-      <Navbar />
-      <div id="content-wrap">
-        {children}
-        <Footer />
-      </div>
-    </div>
-  </>
-)
+class Layout extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isMenuVisible: false,
+            loading: 'is-loading'
+        }
+        this.handleToggleMenu = this.handleToggleMenu.bind(this)
+    }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    componentDidMount () {
+        this.timeoutId = setTimeout(() => {
+            this.setState({loading: ''});
+        }, 100);
+    }
+
+    componentWillUnmount () {
+        if (this.timeoutId) {
+            clearTimeout(this.timeoutId);
+        }
+    }
+
+    handleToggleMenu() {
+        this.setState({
+            isMenuVisible: !this.state.isMenuVisible
+        })
+    }
+
+    render() {
+        const { children } = this.props
+
+        return (
+            <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
+                <div id="wrapper">
+                    <Header onToggleMenu={this.handleToggleMenu} />
+                    {children}
+                    <Contact />
+                    <Footer />
+                </div>
+                <Menu onToggleMenu={this.handleToggleMenu} />
+            </div>
+        )
+    }
 }
 
 export default Layout

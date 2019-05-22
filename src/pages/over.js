@@ -1,42 +1,57 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
+import moment from 'moment'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Title from "../components/Globals/Title"
-import AboutInfo from "../components/About/AboutInfo"
-import PersonalInfo from "../components/About/PersonalInfo"
+import Layout from '../components/layout'
+import PersImage from '../assets/images/OwnImage.jpg'
+import pers_black from '../assets/images/pers-black.jpg'
+import pers_color from '../assets/images/pers-color.jpg'
+import BannerLanding from '../components/BannerLanding'
 
-const overPage = ({ data }) => (
+// The date of today
+var currentDate = moment.now()
+// My birthday
+const birthDate = moment([1997, 9, 4])
+
+const over = props => (
   <Layout>
-    <SEO title="Over" keywords={[`gatsby`, `application`, `react`]} />
-    <Title
-      title="Over mij"
-      styleClass="text-uppercase font-weight-bold"
-      // titleOrientation="text-left"
-      headerType="2"
-    />
-    <AboutInfo />
-    <PersonalInfo image={data.PersonalImage} />
+    <Helmet>
+      <title>Artic-webshop - M.Bordes</title>
+      <meta name="descritpion" content="Artic webshop" />
+    </Helmet>
+
+    <BannerLanding />
+    <div id="main">
+      <section id="one" className="spotlights">
+        <section>
+          {/* <Link to="#" className="image"> */}
+          <img src={pers_color} alt="Smoelenfoto" className="image fit" />
+          {/* </Link> */}
+          <div className="content">
+            <div className="inner">
+              <p>
+                Mijn naam is Menno, ik ben{' '}
+                {-birthDate.diff(currentDate, 'years')} jaar oud en volg de
+                opleiding informatica aan de Hogeschool in Rotterdam.
+                <br />
+                <br />
+                Voordat ik aan deze opleiding was begonnen heb ik eerst de
+                opleiding Middenkader Engineering Elektrotechniek gevolgd en
+                afgerond. Gedurende deze opleiding werd een introductie gegeven
+                van Arduino, wat ik erg gemakkelijk oppikte. Tevens heb ik
+                tijdens mijn afstudeerstage volledig met Visual Basic gewerkt.
+                <br />
+                Mede dankzij deze ervaringen heb ik besloten om als
+                vervolgopleiding voor Informatica te kiezen.
+                <br />
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
   </Layout>
 )
 
-export const query = graphql`
-  query {
-    PersonalImage: file(relativePath: { eq: "OwnImage.jpg" }) {
-      ...squareImage
-    }
-  }
-`
-
-export const squareImage = graphql`
-  fragment squareImage on File {
-    childImageSharp {
-      fluid(maxWidth: 300, maxHeight: 300) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-export default overPage
+export default over
