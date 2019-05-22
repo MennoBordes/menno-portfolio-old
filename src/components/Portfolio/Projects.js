@@ -9,12 +9,13 @@ const Project = ({ data }) => (
     <div className="container">
       <Title title="Gemaakte projecten" />
       {/* Projects */}
-      <div className="row">
+      <div>
+        {/* <div className="row"> */}
         {/* Webshop */}
         <ProjectPreview
           image={data.articWebshop.childImageSharp.fixed}
           imageAlt="Webshop"
-          title="Webshop"
+          title="Kunst webshop"
           description="Een webshop gemaakt met behulp van React, Javascript en SQL"
           linkTo="/portfolio/Artic_webshop"
         />
@@ -27,20 +28,19 @@ const Project = ({ data }) => (
 export default props => (
   <StaticQuery
     query={graphql`
-      query {
-        articWebshop: file(relativePath: { eq: "PersonalImage.png" }) {
-          childImageSharp {
-            fixed(width: 150, height: 150) {
-              ...GatsbyImageSharpFixed
-            }
+      fragment projectPreview on File {
+        childImageSharp {
+          fixed(width: 200, height: 200) {
+            ...GatsbyImageSharpFixed
           }
         }
+      }
+      query {
+        articWebshop: file(relativePath: { eq: "PersonalImage.png" }) {
+          ...projectPreview
+        }
         ballenbuis: file(relativePath: { eq: "ballenbuis.png" }) {
-          childImageSharp {
-            fixed(width: 150, height: 150) {
-              ...GatsbyImageSharpFixed
-            }
-          }
+          ...projectPreview
         }
       }
     `}
